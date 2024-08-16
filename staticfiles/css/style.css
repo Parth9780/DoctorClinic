@@ -1,0 +1,547 @@
+body {
+    margin: 0 !important;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.navbar {
+    background: #fffbfb;
+}
+
+.media-icon .icon {
+    list-style: none;
+    text-decoration: none !important;
+    font-size: 25px !important;
+    color: #f37a7a !important;
+    padding: 5px;
+}
+
+/* Login-Css */
+.login-form {
+    background: url('../images/Background-Animation-HTML-CSS.gif') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh !important;
+}
+
+.Login-div {
+    margin-top: 50px !important;
+    /* text-align: center; */
+    /* border: 2px solid white; */
+    padding: 20px;
+}
+
+.Login-div h3 {
+    border: 2px solid white;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.Login-div i {
+    font-size: 60px !important;
+    text-align: center !important;
+}
+
+.form-input {
+    padding: 10px;
+}
+
+.form-control {
+    padding: 10px !important;
+    background: transparent !important;
+}
+
+.button-log {
+    text-align: center !important;
+}
+
+.SocialMedia {
+    /* text-align: center !important; */
+    margin: auto;
+    justify-content: center !important;
+}
+
+.SocialMedia a i {
+    font-size: 22px !important;
+    background-color: #fff;
+    /* padding-left: 20px; */
+    padding: 10px;
+    margin-top: -2px;
+    /* margin-left: 30px; */
+    border-radius: 50%;
+}
+
+/* index page */
+
+.root {
+    background-color: #f37a7a;
+    width: 100vw;
+    height: auto !important;
+}
+
+/* .girl-doctor{
+    margin-top: 3px;
+    border: 15px solid #fff;
+    border-radius: 50%;
+    border-bottom: none !important;
+    overflow-x: hidden !important;
+} */
+/* .girl-doctor img {
+    overflow-x: hidden !important;
+} */
+
+.con-Text {
+    width: 80% !important;
+    margin: auto;
+    margin-top: 8%;
+}
+
+.con-Text h1 {
+    text-align: left;
+    color: #fff;
+    /* font-family: "Edu AU VIC WA NT Hand", cursive; */
+    /* font-family: "Lato", sans-serif; */
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+
+.con-Text hr {
+    width: 50px !important;
+    color: #000;
+}
+
+.con-Text p {
+    text-align: left;
+    color: #fff;
+    /* font-family: "Zain", sans-serif; */
+    /* font-family: "Playwrite AR", cursive; */
+    font-size: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.img-round {
+    text-align: center !important;
+}
+
+.img-round img {
+    padding: 20px;
+    border: 3px dotted #457b9d;
+    border-radius: 50%;
+}
+
+.img-round p {
+    padding: 10px;
+    color: #457b9d;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.why-context h1 {
+    color: #f37a7a;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+
+.why-context hr,
+.title-line {
+    width: 55px !important;
+    height: 2px !important;
+    color: #457b9d;
+    /* margin-bottom: 5px !important; */
+}
+
+.why-context p {
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #457b9d;
+}
+
+.review-part {
+    padding: 12px;
+    display: flex !important;
+}
+
+.review-part .review-text {
+    text-align: left;
+    padding-left: 15px;
+}
+
+.review-text h2 {
+    color: #457b9d;
+}
+
+.review-part .review-text p {
+    font-size: 14px;
+    color: #457b9d;
+}
+
+.title-lable {
+    color: #f37a7a !important;
+    font-family: "Playfair Display", serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+
+.title-line {
+    width: 50px;
+    color: #1a76d1 !important;
+}
+
+.Team-Img {
+    text-align: center !important;
+}
+
+.Team-Img img {
+    width: auto;
+    height: 230px !important;
+    background-color: #457b9d;
+    border-radius: 50%;
+}
+
+.Team-Img h5 {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0.1rem;
+    color: #f37a7a;
+    /* text-decoration: underline; */
+}
+
+.titel-paragraph {
+    /* width: 40% !important; */
+    text-align: center;
+    margin: auto;
+}
+/*
+.title-header {
+    width: 45% !important;
+}
+
+@media screen and (max-width: 426px) {
+    .title-header {
+        width: 100% !important;
+    }
+
+    .titel-paragraph {
+        width: 95% !important;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .title-header {
+        width: 70% !important;
+    }
+
+    .titel-paragraph {
+        width: 60% !important;
+    }
+} */
+
+.Blog-Card{
+    background-color: #f37a7a !important;
+}
+
+.footer-titel{
+    color: #fff !important;
+    font-family: "Playfair Display", serif !important;
+    font-optical-sizing: auto;
+    font-weight: 300 !important;
+    font-style: normal;
+}
+.footer-line {
+    width: 50px;
+    color: #fff !important;
+}
+.footer-icon{
+    text-align: center !important;
+}
+.footer-icon a{
+    padding-right: 15px !important;
+}
+.footer-icon a i{
+    border: 2px solid #fff !important;
+    padding: 6px;
+    border-radius: 50%;
+}
+
+.Blog-Card{
+    transition: all 0.4s;
+}
+
+.Blog-Card:hover{
+    transform: scale(1.15);
+}
+
+@media screen and (max-width:426px) {
+    .Blog{
+        margin: auto !important;
+    }
+}
+
+/* ============================ */
+/* otp varification */
+/* ============================ */
+
+.otp-field {
+	flex-direction: row;
+	column-gap: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.otp-field input {
+	height: 45px;
+	width: 42px;
+	border-radius: 6px;
+	outline: none;
+	font-size: 1.125rem;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+.otp-field input:focus {
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.otp-field input::-webkit-inner-spin-button,
+.otp-field input::-webkit-outer-spin-button {
+	display: none;
+}
+
+.resend {
+	font-size: 12px;
+}
+
+.footer {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	color: black;
+	font-size: 12px;
+	text-align: right;
+	font-family: monospace;
+}
+
+.footer a {
+	color: black;
+	text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* start -- login-logout-section */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+.infinity-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	color: #000;
+	background: url('/static/image/bg3.jpg') center no-repeat;
+	background-size: cover;
+}
+
+.infinity-form-block {
+	width: 350px;
+	border-radius: 5px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.infinity-click-box {
+	height: 50px;
+	background-color: rgb(79, 79, 211);
+	color: #fff;
+	line-height: 50px;
+	font-size: 20px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
+}
+
+.infinity-fold {
+	position: relative;
+	width: 100%;
+	background: rgba(102, 105, 255, 0.5);
+	padding: 30px 20px;
+}
+
+.infinity-form .text-sm {
+	font-size: 14px;
+}
+
+.infinity-form .form-input {
+	position: relative;
+}
+
+.infinity-form .form-input input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 40px;
+	border: 2px solid #fff;
+	border-radius: 20px;
+	outline: none;
+	background: transparent;
+	padding-left: 45px;
+}
+
+.infinity-form .form-input span {
+	position: absolute;
+	top: 8px;
+	padding-left: 20px;
+	color: #777;
+}
+
+.infinity-form .form-input input:focus,
+.infinity-form .form-input input:valid {
+	border: 2px solid rgb(79, 79, 211);
+}
+
+.infinity-form .form-input input:focus::placeholder {
+	color: #454b69;
+}
+
+.infinity-form input[type="checkbox"]:not(:checked)+label:before {
+	background: transparent;
+	border: 2px solid #fff;
+	width: 15px;
+	height: 15px;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+	background-color: #ff8333 !important;
+	border: 0;
+	width: 15px;
+	height: 15px;
+}
+
+.infinity-form button[type="submit"] {
+	margin-top: 10px;
+	border: none;
+	cursor: pointer;
+	width: 150px;
+	height: 40px;
+	border-radius: 5px;
+	background: rgb(79, 79, 211);
+	color: #fff;
+	font-weight: 700;
+	transition: .5s;
+	margin-bottom: 10px;
+}
+
+.infinity-form button[type="submit"]:hover {
+	background: rgb(52, 52, 133);
+	-webkit-box-shadow: 0 9px 10px -2px rgba(0, 0, 0, 0.55);
+	-moz-box-shadow: 0 9px 10px -2px rgba(0, 0, 0, 0.55);
+	box-shadow: 0 9px 10px -2px rgba(0, 0, 0, 0.55);
+}
+
+.forget-link,
+.login-link,
+.register-link {
+	color: #000;
+	font-weight: 700;
+}
+
+.forget-link:hover,
+.login-link:hover,
+.register-link:hover {
+	color: rgb(79, 79, 211);
+}
+
+.infinity-social-btn ul {
+	display: flex;
+}
+
+.infinity-social-btn ul li {
+	position: relative;
+	list-style: none;
+	width: 50px;
+	height: 50px;
+	top: 10px;
+	left: 20px;
+	align-items: center;
+	margin-right: 20px;
+	background: #fff;
+	text-align: center;
+	border: 4px solid transparent;
+	box-sizing: border-box;
+	border-radius: 50%;
+	transition: .5s;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.infinity-social-btn ul li .facebook .fa {
+	color: #3b5999;
+}
+
+.infinity-social-btn ul li .google .fa {
+	color: #dd4b39;
+}
+
+.infinity-social-btn ul li .twitter .fa {
+	color: #3cf;
+}
+
+.infinity-social-btn ul li:hover:nth-child(1) {
+	background-color: #3b5999;
+}
+
+.infinity-social-btn ul li:hover:nth-child(2) {
+	background-color: #dd4b39;
+}
+
+.infinity-social-btn ul li:hover:nth-child(3) {
+	background-color: #55acee;
+}
+
+.infinity-social-btn ul li .fa {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 24px;
+	color: #2196f3;
+	transition: .5s;
+}
+
+.infinity-social-btn ul li .fa:nth-child(1) {
+	left: -50%;
+	opacity: 0;
+}
+
+.infinity-social-btn ul li:hover .fa:nth-child(1) {
+	left: 50%;
+	opacity: 1;
+	color: #fff;
+}
+
+.infinity-social-btn ul li:hover .fa:nth-child(2) {
+	left: 150%;
+	opacity: 0;
+}
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */
+/* end -- login -- logout -- section */
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------- */

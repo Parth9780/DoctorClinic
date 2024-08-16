@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Clinic Welcome To you</title>
+        <link rel="icon" type="image/x-icon"
+            href="/static/images/Medicalwp-Medical-Doctor-blue.32.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- Bootstrap Css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <!-- Bootstrap Js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+            rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Fontawesome cdn -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+            .btn1{
+                border: 1px solid #457b9d;
+                color: #457b9d;
+            }
+            .btn1:hover{
+                background: #457b9d;
+                color: white;
+            }
+            .btn1-fill{
+                background: #457b9d;
+                color: white;
+            }
+            .btn1-fill:hover{
+                background: #4c88ad;
+                color: white;
+            }
+            .btn2{
+                border:1px solid #df6a6a;
+                color: #df6a6a;
+            }
+            .btn2:hover{
+                background-color: #df6a6a;
+                color: #fff;
+            }
+            iframe{
+                width: 100% !important;
+                height: 100% !important;
+            }
+            .ul .li{
+                list-style: none;
+            }
+            .a{
+                text-decoration: none;
+                color: #fff;
+                margin-left: -25px !important;
+                
+            }
+            .a:hover{
+                color: lightgrey;
+            }
+            .li .a span{
+                padding-right: 7px;
+                padding-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold pe-5 fs-3"
+                    style="color: #457b9d;"
+                    href="#"><span
+                        style="color: #df6a6a;">Do</span>ctorClinic</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active "
+                                aria-current="page"
+                                href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/about">About
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                                href="/appointment">Appointment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                                href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex media-icon">
+                        <a href="#" class="icon"><span
+                                class="bi bi-facebook"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-twitter"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-instagram"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-linkedin"></span></a>
+                        {% if user is none %}
+                        <a href="/login"
+                            class="btn btn1 ms-3 fs-5">Login</a>
+                        {% else %}
+                        <div class="dropdown">
+                            <a
+                                class="btn btn1 ms-3 fs-5 dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                {{user}}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="/profile">Update Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="/userlogout">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Navebar End -->
+        <!-- Hero Section Start -->
+        <section>
+            <div class="root">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 col-md-6 col-12">
+                            <div class="con-Text">
+                                <!-- <h1 class="">Your Health is Doctor Clinic responsibility Don't Wory Doctor Clinic full of Care of our Health</h1> -->
+                                <h1>Care For Your Health</h1>
+                                <hr>
+                                <h1 class="pt-1">What You Can Do to Maintain<br>
+                                    Your Health</h1>
+                                <p>a lot of factors play a role in stying
+                                    healthy. In turn, good <br> health can
+                                    decrease your risk of developing certain
+                                    <br>diseases or conditions.
+                                </p>
+                                <a href="/appointment"
+                                    class="btn btn-outline-light mb-3">Book
+                                    Appointment</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 col-md-6 col-9 girl-doctor ">
+                            <img src="/static/images/doctor.png"
+                                class="img-fluid" alt>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="second-half">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-md-3 col-6">
+                            <div class="img-round">
+                                <img
+                                    src="/static/images/bookhelathcheck_icon.svg"
+                                    class="img-fluid" alt>
+                                <p>Health Check</p>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="img-round">
+                                <img src="/static/images/consultonline_icon.svg"
+                                    class="img-fluid" alt>
+                                <p>Counsult online</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="img-round">
+                                <img src="/static/images/buymedicines_icon.svg"
+                                    class="img-fluid" alt>
+                                <p>Buy Medicines</p>
+
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="img-round">
+                                <img src="/static/images/finddoctor_icon.svg"
+                                    class="img-fluid" alt>
+                                <p>Find Doctor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Why-Choose">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-lg-7 col-md-12 col-12 p-3 why-context">
+                            <h1 class="title-lable">
+                                Why Choose Us
+                            </h1>
+                            <hr>
+                            <p class>
+                                Doctor Clinic is committed to deliver quality
+                                care to it’s
+                                patient and our practicing standards are
+                                recognized by the National Accreditation Board
+                                for Hospitals & Healthcare Providers (NABH).
+                            </p>
+                            <div class="row mt-5">
+                                <div class="col-lg-6 col-md-6 col-6 mt-3">
+                                    <div class="review-part">
+                                        <div>
+                                            <img
+                                                src="/static/images/why-patients-icon.png"
+                                                class="img-fluid" alt>
+                                        </div>
+                                        <div class="review-text">
+                                            <h2>130000+</h2>
+                                            <p>Patient treated every year</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-6 mt-3">
+                                    <div class="review-part">
+                                        <div>
+                                            <img
+                                                src="/static/images/why-doctor-icon.png"
+                                                class="img-fluid" alt>
+                                        </div>
+                                        <div class="review-text">
+                                            <h2>575+</h2>
+                                            <p>Highly Experienced Doctor</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-6 mt-3">
+                                    <div class="review-part">
+                                        <div>
+                                            <img
+                                                src="/static/images/why-criticle-icon.png"
+                                                class="img-fluid" alt>
+                                        </div>
+                                        <div class="review-text">
+                                            <h2>25000+</h2>
+                                            <p>Critical care treatments</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-6 mt-3">
+                                    <div class="review-part">
+                                        <div>
+                                            <img
+                                                src="/static/images/why-rate-icon.png"
+                                                class="img-fluid" alt>
+                                        </div>
+                                        <div class="review-text">
+                                            <h2>15+</h2>
+                                            <p>Years of Excellence</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div class="col-md-5 col-9 mx-auto">
+                            <img
+                                src="/static/images/HCG_Why-Choose-Us_About-001.webp"
+                                class="img-fluid" alt>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <hr style="width: 85%;" class="mx-auto mt-5"> -->
+            <div class="list-content">
+                <div class="container">
+                    <div class="row mt-5 ">
+                        <h1 class="title-lable">Healthy products</h1>
+                        <!-- <hr class="title-line mb-5"> -->
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/D_9a4306bf-a0f5-4dec-8281-1ccca5dde3fc_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ayurvedic Detox
+                                        Juice</h5>
+                                    <p class="card-text">Ayurvedic
+                                        detoxification | Perfect combination of
+                                        giloy, karela, jamun & neem.</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/Cholesterol1000_1_eaae5106-cb37-4bce-b99f-98e5af248766_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Choles-terol Care
+                                        Juice</h5>
+                                    <p class="card-text">Right mix of Apple
+                                        Cider Vinegar, Ginger juice, Garlic
+                                        juice, Lemon juice &
+                                        Honey.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img src="/static/images/Thyro_1_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Thyro balance
+                                        juice</h5>
+                                    <p class="card-text">Natural thyroid Care
+                                        Juice | Goodness of Durva, Kanchnar,
+                                        Mandukparni, Brahmi & 20 other
+                                        herbs.</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/patharchattadi1000ml_4_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Patharchatadi
+                                        Swaras</h5>
+                                    <p class="card-text">Goodness of Pashanbhed,
+                                        Adulsa, Kutki & Amla | Blend of
+                                        Ayurvedic Herbs for kidney stone.</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/A_6483c314-fd44-4440-8329-8821eefd3341_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Jamun Seed
+                                        Powder</h5>
+                                    <p class="card-text">Manage Blood Sugar
+                                        Level | Antioxidant Properties.</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img src="/static/images/Moringa Powder.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Moringa Powder</h5>
+                                    <p class="card-text">RIch in essential
+                                        vitamins, minerals, and amino acids</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/AloeVeraGel500gm1_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aloe vera Gel</h5>
+                                    <p class="card-text">Multipurpose pure Aloe
+                                        Vera Gel for skin & hair</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-10 mx-auto">
+                            <div class="card mt-3">
+                                <img
+                                    src="/static/images/Aloesaffron_gel_1_540x.webp"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Aloe Saffron Gel</h5>
+                                    <p class="card-text">RIch in essential
+                                        vitamins, minerals, and amino acids</p>
+                                    <a href="#"
+                                        class="btn btn2 btn-md">Buy Now
+                                        <span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="expert-doctor">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-md-12 col-12">
+                            <h1 class="title-lable">
+                                Expert Team
+                            </h1>
+                            <hr class="title-line">
+                        </div>
+                        <div
+                            class="col-lg-3 col-md-6 col-sm-6 col-8 mx-auto Team-Img mt-4">
+                            <img src="/static/images/Doctor-1.png"
+                                class="img-fluid" alt>
+                            <h5 class="pt-2">Dr. Namisha Patel</h5>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 col-sm-6 col-8 mx-auto  Team-Img mt-4">
+                            <img src="/static/images/Doctor-2.png"
+                                class="img-fluid" alt>
+                            <h5 class="pt-2">Dr. Namita Shah</h5>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 col-sm-6 col-8 mx-auto Team-Img mt-4">
+                            <img src="/static/images/Doctor-4.png"
+                                class="img-fluid" alt>
+                            <h5 class="pt-2">Dr. Amit Jhala</h5>
+                        </div>
+                        <div
+                            class="col-md-6 col-lg-3 col-sm-6 col-8 mx-auto Team-Img mt-4">
+                            <img src="/static/images/Doctor-5.png"
+                                class="img-fluid" alt>
+                            <h5 class="pt-2">Dr. Nandana Jasti</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="services-div">
+                <div class="container">
+                    <div class="row mt-5 p-5">
+                        <div class="col-lg-5  col-md-8 col-11 mx-auto">
+                            <h1
+                                class="mx-auto text-center title-lable title-header">We
+                                Offer Different Services To Improve Your
+                                Health</h1>
+                            <hr class="title-line mx-auto">
+                            <p class="titel-paragraph">Lorem ipsum dolor sit
+                                amet consectetur adipiscing elit praesent
+                                aliquet. pretiumts</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12 col-12 pt-4">
+                            <h2 class="title-lable">Who We Are</h2>
+                            <hr class="title-line my-4">
+                            <p class="pe-5">Lorem ipsum dolor sit amet,
+                                consectetur adipiscing elit. Maecenas pharetra
+                                antege vel est lobortis, a commodo magna
+                                rhoncus. In quis nisi non emet quam pharetra
+                                commodo.</p>
+                            <p class="pe-5 pt-2">Class aptent taciti sociosqu ad
+                                litora torquent per conubia nostra, per inceptos
+                                himenaeos.</p>
+                            <div class="row">
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Maecenas
+                                        vitae luctus nibh.</p>
+                                </div>
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Maecenas
+                                        vitae luctus nibh.</p>
+                                </div>
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Duis
+                                        massa massa.</p>
+                                </div>
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Duis
+                                        massa massa.</p>
+                                </div>
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Aliquam
+                                        feugiat interdum.</p>
+                                </div>
+                                <div class="col-lg-5 col-8">
+                                    <p class="text-start"><a href="#"
+                                            class="bi bi-play-circle-fill"></a>&nbsp;&nbsp;&nbsp;Aliquam
+                                        feugiat interdum.</p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-12">
+                            <iframe
+                                src="https://www.youtube.com/embed/g-jj4KrmYPI?si=4NboNMDLbn0gAMHH"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="Medical-News">
+                <div class="container">
+                    <div class="row mt-5">
+                        <div class="col-md-12 col-12">
+                            <h1 class="title-lable">
+                                Latest Blog
+                            </h1>
+                            <hr class="title-line">
+                        </div>
+                        <div class="col-lg-4 cil-md-5 col-sm-6 col-10 mt-5 Blog">
+                            <div class="card Blog-Card mx-auto"
+                                style="width: 18rem;">
+                                <img src="/static/images/blog1.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button"
+                                        class="btn btn-outline-light">22 Aug.
+                                        2022</button>
+                                    <h5 class="card-title pt-3 text-white">We
+                                        have annnocuced our new product.</h5>
+                                    <p class="card-text"
+                                        style="color: lightgray;">Lorem Ipsum
+                                        Dolor A Sit Ameti, Consectetur
+                                        Adipisicing Elit, Sed Do Eiusmod Tempor
+                                        Incididunt Sed Do Incididunt Sed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 cil-md-5 col-sm-6 col-10 mt-5 Blog">
+                            <div class="card Blog-Card mx-auto"
+                                style="width: 18rem;">
+                                <img src="/static/images/blog2.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button"
+                                        class="btn btn-outline-light">15 jul.
+                                        2025</button>
+                                    <h5 class="card-title pt-3 text-white">Top
+                                        five way for solving teeth
+                                        problems.</h5>
+                                    <p class="card-text"
+                                        style="color: lightgray;">Lorem Ipsum
+                                        Dolor A Sit Ameti, Consectetur
+                                        Adipisicing Elit, Sed Do Eiusmod Tempor
+                                        Incididunt Sed Do Incididunt Sed.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 cil-md-5 col-sm-6 col-10 mt-5 Blog">
+                            <div class="card Blog-Card mx-auto"
+                                style="width: 18rem;">
+                                <img src="/static/images/blog3.jpg"
+                                    class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <button type="button"
+                                        class="btn btn-outline-light">05 Jan.
+                                        2030</button>
+                                    <h5 class="card-title pt-3 text-white">We
+                                        provide highly business solutions.</h5>
+                                    <p class="card-text"
+                                        style="color: lightgray;">Lorem Ipsum
+                                        Dolor A Sit Ameti, Consectetur
+                                        Adipisicing Elit, Sed Do Eiusmod Tempor
+                                        Incididunt Sed Do Incididunt Sed.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+        <!-- Footer Start -->
+        <footer class="mt-5">
+            <div class="container-fluid" style="background-color: #457b9d;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">About Us</h3>
+                            <hr class="footer-line">
+                            <p class="text-white pt-3 pb-3">Lorem ipsum dolor
+                                sit am consectetur adipisicing elit do eiusmod
+                                tempor incididunt ut labore dolore magna.</p>
+                            <p class="footer-icon" style="display: flex;">
+                                <a href="#"><i
+                                        class="fa-brands fa-facebook-f text-white"
+                                        style="padding-left: 9px; padding-right: 9px;"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-google-plus-g text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-twitter text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-vimeo-v text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-pinterest-p text-white"
+                                        style="padding-left: 9px; padding-right: 9px;"></i></a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">Quick Links</h3>
+                            <hr class="footer-line">
+                            <ul class="text-start ul pt-3">
+                                <li class="li">
+                                    <a href="#" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Home</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="/about" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>About
+                                        Us</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="/appointment" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Appointment</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="/contact" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Contact
+                                        Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">Open Hours</h3>
+                            <hr class="footer-line">
+                            <p class="text-white pt-3 pb-2">Lorem ipsum dolor
+                                sit am consectetur adipisicing elit do eiusmod
+                                tempor incididunt ut labore dolore magna.
+                            </p>
+                            <table>
+                                <tbody class="text-white">
+                                    <tr>
+                                        <td>Monday - Friday</td>
+                                        <td class="ps-3">8.00-20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td class="ps-3">9.00-18.30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monday - Thursday</td>
+                                        <td class="ps-3">9.00-15.00</td>
+                                    </tr>
+                                </tbody>
+                                <div class="row">
+                                    <div class="col-md-8 col-7">
+                                        <!-- <p class="text-white">Monday - Friday</p> -->
+
+                                    </table>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
+                                    <h3 class="footer-titel">Address</h3>
+                                    <hr class="footer-line">
+                                    <address class="text-white pt-3">7QQc+F97,
+                                        Service Road, <br>Near Indira
+                                        circle,<br> Golden Park, <br>Rajkot,
+                                        Gujarat 360005</address>
+                                    <a
+                                        href="https://maps.app.goo.gl/Sjdbd7KsQtauL4EN7"
+                                        class="btn btn-outline-light">Location
+                                        Hear <span
+                                            class="bi bi-arrow-right"></span>&nbsp;&nbsp;<span
+                                            class="bi bi-arrow-right"></span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 py-3 text-center">
+                        <hr class="text-white fw-bolder">
+                        <a href="#" class="a">© Copyright 2024 | All
+                            Rights Reserved by Parth Kavathiya</a>
+                        <hr class="text-white fw-bolder">
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End -->
+    </body>
+</html>

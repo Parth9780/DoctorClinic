@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Doctor Clinic Welcome To you</title>
+        <link rel="icon" type="image/x-icon"
+            href="/static/images/Medicalwp-Medical-Doctor-blue.32.png">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="/static/css/forms-style.css">
+        <!-- Bootstrap Css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous">
+        <!-- Bootstrap Js -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap"
+            rel="stylesheet">
+        <!-- Bootstrap Icons -->
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Fontawesome cdn -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+            integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            .btn1{
+                border: 1px solid #457b9d;
+                color: #457b9d;
+            }
+            .btn1:hover{
+                background: #457b9d;
+                color: white;
+            }
+            .btn1-fill{
+                background: #457b9d;
+                color: white;
+            }
+            .btn1-fill:hover{
+                background: #4c88ad;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar Start -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold pe-5" style="color: #457b9d;"
+                    href="#"><span
+                        style="color: #df6a6a;">Do</span>ctorClinic</a>
+                <button class="navbar-toggler" type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link "
+                                aria-current="page"
+                                href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="/about">About
+                                Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active"
+                                href="#">Appointment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link "
+                                href="/contact">Contact Us</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex media-icon">
+                        <a href="#" class="icon"><span
+                                class="bi bi-facebook"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-twitter"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-instagram"></span></a>
+                        <a href="#" class="icon"><span
+                                class="bi bi-linkedin"></span></a>
+                        {% if user is none %}
+                        <a href="/login"
+                            class="btn btn1 ms-3 fs-5">Login</a>
+                        {% else %}
+                        <div class="dropdown">
+                            <a
+                                class="btn btn1 ms-3 fs-5 dropdown-toggle"
+                                href="#"
+                                role="button"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                {{user}}
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="/profile">Update Profile</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item"
+                                        href="/userlogout">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- Navebar End -->
+        <!-- Hero Section Start -->
+        <section>
+            <div class="containet-fluid">
+                <div class="top-header">
+                    <div class="header-text">
+                        <h2>Book Our Appointment</h2>
+                        <p class="pt-3">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Doloremque ullam molestias
+                            accusamus, labore dolorum blanditiis? Excepturi,
+                            commodi at perspiciatis enim nesciunt quis quia non
+                            temporibus delectus, nulla distinctio ut magni?</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Appointment Start -->
+            <div class="container-xxl py-5">
+                <div class="container">
+                    <div class="row g-5">
+                        <div class="col-lg-6 wow fadeInUp"
+                            data-wow-delay="0.1s">
+                            <p
+                                class="d-inline-block border rounded-pill py-1 px-4">Appointment</p>
+                            <h1 class="mb-4">Make An Appointment To Visit Our
+                                Doctor</h1>
+                            <p class="mb-4">Tempor erat elitr rebum at clita.
+                                Diam dolor diam ipsum sit. Aliqu diam amet diam
+                                et eos. Clita erat ipsum et lorem et sit, sed
+                                stet lorem sit clita duo justo magna dolore erat
+                                amet</p>
+                            <div
+                                class="bg-light rounded d-flex align-items-center p-5 mb-4">
+                                <div
+                                    class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                                    style="width: 55px; height: 55px;">
+                                    <i class="fa fa-phone-alt text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Call Us Now</p>
+                                    <h5 class="mb-0">+091 63542 87550</h5>
+                                </div>
+                            </div>
+                            <div
+                                class="bg-light rounded d-flex align-items-center p-5">
+                                <div
+                                    class="d-flex flex-shrink-0 align-items-center justify-content-center rounded-circle bg-white"
+                                    style="width: 55px; height: 55px;">
+                                    <i
+                                        class="fa fa-envelope-open text-primary"></i>
+                                </div>
+                                <div class="ms-4">
+                                    <p class="mb-2">Mail Us Now</p>
+                                    <h5 class="mb-0">doctorclinic0123@gmail.com</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 wow fadeInUp"
+                            data-wow-delay="0.5s">
+                            <div
+                                class="bg-light rounded h-100 d-flex align-items-center p-5">
+
+                                <form method="post" onsubmit="handleForm(event)">
+                                    {% csrf_token %}
+                                    <div class="row g-3">
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text"
+                                                class="form-control border-0"
+                                                placeholder="Your Name"
+                                                name="Name"
+                                                style="height: 55px;">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input type="email"
+                                                class="form-control border-0"
+                                                placeholder="Your Email"
+                                                name="Email"
+                                                style="height: 55px;">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <input type="text"
+                                                class="form-control border-0"
+                                                placeholder="Your Mobile"
+                                                name="Mobile"
+                                                style="height: 55px;">
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <select class="form-select border-0"
+                                                name="Doctor"
+                                                style="height: 55px;">
+                                                <option selected>Choose
+                                                    Doctor</option>
+                                                <option>Dr. Namita
+                                                    Shah</option>
+                                                <option>Dr. Amit
+                                                    Jhala</option>
+                                                <option>Dr. Nandana
+                                                    Jasti</option>
+                                                <option>Dr. Namisha
+                                                    Patel</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="date" id="date"
+                                                data-target-input="nearest">
+                                                <input type="date"
+                                                    class="form-control border-0 datetimepicker-input"
+                                                    placeholder="Choose Date"
+                                                    data-target="#date"
+                                                    name="Date"
+                                                    data-toggle="datetimepicker"
+                                                    style="height: 55px;">
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-sm-6">
+                                            <div class="time" id="time"
+                                                data-target-input="nearest">
+                                                <input type="time"
+                                                    class="form-control border-0 datetimepicker-input"
+                                                    placeholder="Choose Date"
+                                                    data-target="#time"
+                                                    name="Time"
+                                                    data-toggle="datetimepicker"
+                                                    style="height: 55px;">
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea
+                                                class="form-control border-0"
+                                                rows="5"
+                                                name="Detail"
+                                                placeholder="Describe your problem"></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button
+                                                class="btn btn1-fill w-100 py-3"
+                                                type="submit">Book
+                                                Appointment</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Appointment End -->
+        </section>
+        <!-- Hero Section End -->
+        <!-- Footer Start -->
+        <footer class="mt-5">
+            <div class="container-fluid" style="background-color: #457b9d;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">About Us</h3>
+                            <hr class="footer-line">
+                            <p class="text-white pt-3 pb-3">Lorem ipsum dolor
+                                sit am consectetur adipisicing elit do eiusmod
+                                tempor incididunt ut labore dolore magna.</p>
+                            <p class="footer-icon" style="display: flex;">
+                                <a href="#"><i
+                                        class="fa-brands fa-facebook-f text-white"
+                                        style="padding-left: 9px; padding-right: 9px;"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-google-plus-g text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-twitter text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-vimeo-v text-white"></i></a>
+                                <a href="#"><i
+                                        class="fa-brands fa-pinterest-p text-white"
+                                        style="padding-left: 9px; padding-right: 9px;"></i></a>
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">Quick Links</h3>
+                            <hr class="footer-line">
+                            <ul class="text-start ul pt-3">
+                                <li class="li">
+                                    <a href="/" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Home</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="/about" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>About
+                                        Us</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="#" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Appointment</a>
+                                </li>
+                                <br>
+                                <li class="li">
+                                    <a href="/contact" class="a"><span
+                                            class="bi bi-play-fill text-white"></span>Contact
+                                        Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-12 mt-4">
+                            <h3 class="footer-titel">Open Hours</h3>
+                            <hr class="footer-line">
+                            <p class="text-white pt-3 pb-2">Lorem ipsum dolor
+                                sit am consectetur adipisicing elit do eiusmod
+                                tempor incididunt ut labore dolore magna.
+                            </p>
+                            <table>
+                                <tbody class="text-white">
+                                    <tr>
+                                        <td>Monday - Friday</td>
+                                        <td class="ps-3">8.00-20.00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td class="ps-3">9.00-18.30</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Monday - Thursday</td>
+                                        <td class="ps-3">9.00-15.00</td>
+                                    </tr>
+                                </tbody>
+                                <div class="row">
+                                    <div class="col-md-8 col-7">
+                                        <!-- <p class="text-white">Monday - Friday</p> -->
+
+                                    </table>
+                                </div>
+                                <div
+                                    class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
+                                    <h3 class="footer-titel">Address</h3>
+                                    <hr class="footer-line">
+                                    <address class="text-white pt-3">7QQc+F97,
+                                        Service Road, <br>Near Indira
+                                        circle,<br> Golden Park, <br>Rajkot,
+                                        Gujarat 360005</address>
+                                    <a
+                                        href="https://maps.app.goo.gl/Sjdbd7KsQtauL4EN7"
+                                        class="btn btn-outline-light">Location
+                                        Hear <span
+                                            class="bi bi-arrow-right"></span>&nbsp;&nbsp;<span
+                                            class="bi bi-arrow-right"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 py-3 text-center">
+                                <hr class="text-white fw-bolder">
+                                <a href="#" class="a">© Copyright 2024 | All
+                                    Rights Reserved by Parth Kavathiya</a>
+                                <hr class="text-white fw-bolder">
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- Footer End -->
+                <!-- Javascript Library -->
+                <script src="/static/js/main.js"></script>
+            </body>
+        </html>

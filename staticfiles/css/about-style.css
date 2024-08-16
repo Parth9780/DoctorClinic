@@ -1,0 +1,144 @@
+.body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Header */
+.top-header {
+    width: 100%;
+    height: auto;
+    background: linear-gradient(to right, #f37a7a 0%, #457b9d 100%);
+    padding: 70px;
+}
+
+.header-text {
+    margin: 3px;
+    padding: 10px;
+    border: 2px solid #fff !important;
+    width: 30%;
+    transition: all 0.7s;
+}
+
+.header-text h2 {
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.header-text p {
+    color: #fff;
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.header-text:hover {
+    transform: scale(1.15);
+}
+
+@media screen and (max-width:426px) {
+    .header-text {
+        transition: all 0.7s;
+        width: 90% !important;
+    }
+
+    .header-text:hover {
+        transform: scale(1.15);
+    }
+    .text h1 {
+        font-size: 40px !important;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .header-text {
+        transition: all 0.7s;
+        width: 60%;
+    }
+
+    .header-text:hover {
+        transform: scale(1.15);
+    }
+}
+
+.root {
+    background-color: #fff;
+}
+
+.one-text {
+    color: #457b9d !important;
+    font-size: 1.3rem;
+
+}
+
+.text {
+    padding: 60px 30px 60px 60px !important;
+}
+
+.text h1 {
+    font-size: 80px !important;
+    /* padding: 10px 150px 25px 70px; */
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: 
+    "wdth" 100;
+    color: #457b9d;
+    line-height: 1;
+}
+.text a{
+    text-decoration: none;
+    color: #457b9d;
+}
+
+.text p{
+    /* padding: 10px 150px 25px 70px; */
+    color: #457b9d;
+    font-size: 1.3rem;
+}
+.text h4{
+    font-family: "Kalnia Glaze", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings: 
+    "wdth" 100;
+    color: #457b9d;
+    line-height: 1;
+}
+@media screen and (max-width:426px) {
+    .text {
+        padding: 0px 30px 20px 30px !important;
+    }
+    .text h1 {
+        font-size: 40px !important;
+    }
+}
+.fast-box{
+    transition: 0.4s;
+}
+.fast-box:hover{
+    transform: scale(1.15) !important;
+}
+.ul .li{
+    list-style: none;
+}
+.a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: -25px !important;
+    
+}
+.a:hover{
+    color: lightgrey;
+}
+.li .a span{
+    padding-right: 7px;
+    padding-bottom: 20px;
+}
